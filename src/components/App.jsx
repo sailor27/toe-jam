@@ -1,20 +1,26 @@
 import React from 'react';
-import Board from './Board';
+import Game from './Game';
 
 function App() {
 
   return(
-    <div>App works
-    <Board/>
-    <style global jsx>
-      {`
+    <div>
+      <h1>🍇 toe jam 👣</h1>
+      <Game/>
+      <style global jsx>
+        {`
           body{
             box-sixing: border-box;
             background-color: #FFFAFA;
-
+            display: flex;
+            justify-content: center;
             font-size: 5em;
             font-family: monospace;
             margin: 20px;
+          }
+
+          h1 {
+            text-align:center;
           }
 
           ol, ul {
@@ -42,19 +48,23 @@ function App() {
             padding: 0;
             text-align: center;
             width: 200px;
+            color: magenta;
           }
 
           .square:focus {
             outline: none;
           }
 
-          game {
+          .game {
+            width: 100vw;
+            height: 100vh;
             display: flex;
             flex-direction: row;
+            justify-content: center;
           }
 
         `}
-    </style>
+      </style>
     </div>
   );
 }
