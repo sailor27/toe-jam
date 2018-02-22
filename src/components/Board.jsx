@@ -3,24 +3,39 @@ import Square from './Square';
 
 class Board extends React.Component{
 
-  renderSquare(i) {
-
-    return <Square/>;
+  renderSquare(num) {
+    return <Square value={num}/>;
   }
 
   render(){
+    const status = 'Next player: X';
     const boardStyle = {
-      display: 'flex',
-      flexFlow: 'row nowrap',
       boxSizing: 'border-box',
-      border: '3px solid black',
       backgroundColor: 'lavender',
     };
 
     return(
-      <div style={boardStyle}>board works</div>
-    );
+      <div style={boardStyle}>
 
+        <div className="status">{status}</div>
+        <div className="board-row">
+          {this.renderSquare(0)}
+          {this.renderSquare(1)}
+          {this.renderSquare(2)}
+        </div>
+        <div className="board-row">
+          {this.renderSquare(3)}
+          {this.renderSquare(4)}
+          {this.renderSquare(5)}
+        </div>
+        <div className="board-row">
+          {this.renderSquare(6)}
+          {this.renderSquare(7)}
+          {this.renderSquare(8)}
+        </div>
+
+      </div>
+    );
   }
 }
 export default Board;
