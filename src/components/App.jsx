@@ -42,12 +42,12 @@ function App() {
             float: left;
             font-size: 2em;
             font-weight: bold;
-            height: 200px;
+            height: 150px;
             margin-right: -1px;
             margin-top: -1px;
             padding: 0;
             text-align: center;
-            width: 200px;
+            width: 150px;
             color: magenta;
           }
 
