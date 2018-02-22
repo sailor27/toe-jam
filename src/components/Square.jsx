@@ -1,13 +1,6 @@
 import React from 'react';
 
 class Square extends React.Component{
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: null
-    };
-  }
-
   render(){
     console.log(this.props);
     const squareStyle = {
@@ -16,8 +9,8 @@ class Square extends React.Component{
       backgroundColor: 'lavender',
     };
     return(
-      <button className="square"style={squareStyle} onClick={() => this.setState({value:'X'})}>
-        {this.state.value}
+      <button className="square" style={squareStyle} onClick={() => this.props.onClick()}>
+        {this.props.value}
       </button>
     );
   }
